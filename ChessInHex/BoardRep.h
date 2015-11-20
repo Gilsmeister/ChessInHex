@@ -1,21 +1,21 @@
-
+#include "move.h"
 #include <vector>
 
 class BoardRep {
 private:
 	int board[128];
-	int pos1[8];	//	1 = white Pawn
-	int pos2[8];	//	2 = black Pawn
-	int pos3[2];	//	3 = white Rook
-	int pos4[2];	//	4 = black Rook
-	int pos5[2];	//	5 = white Knight
-	int pos6[2];	//	6 = black Knight
-	int pos7[2];	//	7 = white Bishop
-	int pos8[2];	//	8 = black Bishop
-	int pos9[1];	//	9 = white King
-	int pos10[1];	//	10 = black King
-	int pos11[9];	//	11 = white Queen
-	int pos12[9];	//	12 = black Queen
+	std::vector<int> pos1;	//	1 = white Pawn
+	std::vector<int> pos2;	//	2 = black Pawn
+	std::vector<int> pos3;	//	3 = white Rook
+	std::vector<int> pos4;	//	4 = black Rook
+	std::vector<int> pos5;	//	5 = white Knight
+	std::vector<int> pos6;	//	6 = black Knight
+	std::vector<int> pos7;	//	7 = white Bishop
+	std::vector<int> pos8;	//	8 = black Bishop
+	std::vector<int> pos9;	//	9 = white King
+	std::vector<int> pos10;	//	10 = black King
+	std::vector<int> pos11;	//	11 = white Queen
+	std::vector<int> pos12;	//	12 = black Queen
 	int unitVal[7];
 public:
 	// Variables:
@@ -24,5 +24,5 @@ public:
 	BoardRep startSetup();
 	BoardRep movePiece(int prev, int post, const BoardRep br);
 	int getBoardVal(bool isWhite, const BoardRep br);
-	std::vector<int> getMoves(bool isWhite, const BoardRep br);
+	std::vector<Move> getMoves(bool isWhite, const BoardRep br);
 };

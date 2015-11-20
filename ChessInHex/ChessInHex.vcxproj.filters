@@ -26,5 +26,8 @@
     <ClCompile Include="BoardRep.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
